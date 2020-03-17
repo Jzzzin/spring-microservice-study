@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="licensing-service" />
         <module name="simpleservice" />
         <module name="spring-micro-study" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ch01" target="1.8" />
+      <module name="ch02" target="1.8" />
+      <module name="licensing-service" target="1.8" />
+      <module name="licensingservice" target="1.8" />
       <module name="simpleservice" target="1.8" />
       <module name="spring-micro-study" target="1.5" />
     </bytecodeTargetLevel>

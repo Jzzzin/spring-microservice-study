@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ch01/ch01.iml" filepath="$PROJECT_DIR$/ch01/ch01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02/ch02.iml" filepath="$PROJECT_DIR$/ch02/ch02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02/licensing-service/licensing-service.iml" filepath="$PROJECT_DIR$/ch02/licensing-service/licensing-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" filepath="$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-micro-study.iml" filepath="$PROJECT_DIR$/spring-micro-study.iml" />
     </modules>

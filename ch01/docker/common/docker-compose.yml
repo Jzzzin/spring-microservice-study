@@ -1,6 +1,6 @@
 version: '2'
 services:
   simpleservice:
-    image: jin/sms-simple-service:ch01
+    image: jin/bn-simple-service:ch01
     ports:
       - "8080:8080"

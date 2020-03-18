@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+#encrypt 관련 설정은 bootstrap.yml 에 해야 함
+#encrypt:
+#  key: "IMSYMMETRIC"

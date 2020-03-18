@@ -5,5 +5,8 @@
     <file url="file://$PROJECT_DIR$/ch01/simpleservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch02" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch02/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/confsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/licensing-service" charset="UTF-8" />
   </component>
 </project>

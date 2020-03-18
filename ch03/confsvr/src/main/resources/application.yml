@@ -19,7 +19,7 @@ spring:
         # encrypt.enabled should moved to bootstrap.yml
         # encrypt.enabled: false
         git:
-          uri: https://github.com/Jzzzin/spring-micro-study/tree/master/config-repo/
+          uri: https://github.com/Jzzzin/spring-micro-study/
           searchPaths: licensingservice, organizationservice
           username: Jzzzin
           password: GITHUBhedgehog3#

@@ -5,4 +5,4 @@
 - https://seokr.tistory.com/670
 - https://smallgiant.tistory.com/19
 
-2. 
+2. postgres DB의 경우 docker-compose 를 통해서 설치한다

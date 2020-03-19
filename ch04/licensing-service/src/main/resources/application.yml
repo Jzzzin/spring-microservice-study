@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    # eureka 에 등록할 서비스의 이름을 host name 이 아닌 ip 주소로 등록
+  client:
+    register-with-eureka: true
+    # eureka 에 서비스 등록
+    fetch-registry: true
+    # eureka registry 캐싱
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      # eureka 서비스 위치

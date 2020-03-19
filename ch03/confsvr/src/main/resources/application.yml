@@ -1,11 +1,11 @@
 #
-#   This is the core configuration for a configuration service.  I have two examples here:
+#   This is the core configuration for a configuration services.  I have two examples here:
 #
-#       -  A configuration service which completelty loads the configuration for the services
-#          from the local file server of the config service.  This should only be used for
+#       -  A configuration services which completelty loads the configuration for the services
+#          from the local file server of the config services.  This should only be used for
 #          demonstration purposes or for a small application with a limited number of services.
 #
-#       -  A configuraton service that uses a git-based repository to read the files from
+#       -  A configuraton services that uses a git-based repository to read the files from
 #
 
 
@@ -38,9 +38,9 @@ spring:
 #    config:
 #      server:
 #        native:
-## mvn spring-boot:run 으로 실행하는 경우 환경설정 파일 경로
+## 절대경로 (mvn spring-boot:run 으로 실행하는 경우만 가능, 도커는 안됨)
 ## windows 에서 경로표시 할 때 file:/// + 드라이브명:/폴더명 으로 작성해야 함
 ##          searchLocations: file:///c:/Workspace/spring-micro-study/ch03/confsvr/src/main/resources/config/licensingservice,
 ##                           file:///c:/Workspace/spring-micro-study/ch03/confsvr/src/main/resources/config/organizationservice
-## 도커로 실행하는 경우 환경설정 파일 경로
+## classpath 사용(도커로 실행하는 경우 환경설정 파일 경로)
 #          searchLocations: classpath:config/licensingservice, classpath:config/organizationservice

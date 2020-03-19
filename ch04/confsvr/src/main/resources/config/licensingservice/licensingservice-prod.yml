@@ -1,0 +1,15 @@
+example.property: "I AM A PROD PROPERTY OVERRIDE"
+spring.jpa.database: "POSTGRESQL"
+spring.datasource.platform: "postgres"
+spring.jpa.show-sql: "true"
+spring.database.driverClassName: "org.postgresql.Driver"
+spring.datasource.url: "jdbc:postgresql://database:5432/eagle_eye_prod"
+spring.datasource.username: "postgres_prod"
+spring.datasource.password: "{cipher}217b23d6209b10bd82c49a9df6490670052a9cd9d4403dcc1288db21c35c48ac"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hiberante.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+#createClob() error 발생하지 않도록 하는 옵션
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: "true"
+# entity 에 따라 create table 수행 후 classpath: 에 import.sql 이 있으면 수행함
+spring.jpa.hibernate.ddl-auto: "create-drop"

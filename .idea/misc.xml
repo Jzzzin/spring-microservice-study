@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/ch02/licensing-service/pom.xml" />
         <option value="$PROJECT_DIR$/ch03/pom.xml" />
         <option value="$PROJECT_DIR$/ch03/licensing-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/eurekasvr/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/organization-service/pom.xml" />
       </list>
     </option>
   </component>

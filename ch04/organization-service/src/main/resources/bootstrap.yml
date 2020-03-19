@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: organizationservice
+    # spring.application.name 은 spring.cloud.config.server 의 directory 이름과 일치해야 함
+    # eureka 에 등록할 서비스의 논리 이름 (application ID)
+  profiles:
+    active: default
+  cloud:
+    config:
+      enabled: true
+#encrypt 관련 설정은 bootstrap.yml 에 해야 함 (mvn 으로 실행하는 경우)
+encrypt:
+  key: "IMSYMMETRIC"

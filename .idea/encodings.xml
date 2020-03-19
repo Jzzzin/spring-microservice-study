@@ -8,5 +8,10 @@
     <file url="file://$PROJECT_DIR$/ch03" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch03/confsvr" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch03/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/confsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/eurekasvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/organization-service" charset="UTF-8" />
   </component>
 </project>

@@ -5,9 +5,14 @@
       <module fileurl="file://$PROJECT_DIR$/ch01/ch01.iml" filepath="$PROJECT_DIR$/ch01/ch01.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02/ch02.iml" filepath="$PROJECT_DIR$/ch02/ch02.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/ch03.iml" filepath="$PROJECT_DIR$/ch03/ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/ch04.iml" filepath="$PROJECT_DIR$/ch04/ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" filepath="$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" filepath="$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" filepath="$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" filepath="$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-micro-study.iml" filepath="$PROJECT_DIR$/spring-micro-study.iml" />
     </modules>

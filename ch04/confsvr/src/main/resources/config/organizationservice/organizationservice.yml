@@ -1,0 +1,15 @@
+example.organization.property: "I AM THE DEFAULT ORGANIZATION SERVICE"
+spring.jpa.database: "POSTGRESQL"
+spring.datasource.platform:  "postgres"
+spring.jpa.show-sql: "true"
+spring.database.driverClassName: "org.postgresql.Driver"
+spring.datasource.url: "jdbc:postgresql://database:5432/eagle_eye_local"
+spring.datasource.username: "postgres"
+spring.datasource.password: "{cipher}4788dfe1ccbe6485934aec2ffeddb06163ea3d616df5fd75be96aadd4df1da91"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+#createClob() error 발생하지 않도록 하는 옵션
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: "true"
+# entity 에 따라 create table 수행 후 classpath: 에 import.sql 이 있으면 수행함
+spring.jpa.hibernate.ddl-auto: "create-drop"

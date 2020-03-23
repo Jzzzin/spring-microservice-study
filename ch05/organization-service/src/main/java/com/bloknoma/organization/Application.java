@@ -1,15 +1,15 @@
-package com.bloknoma.confsvr;
+package com.bloknoma.organization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient // 생략가능?
-@EnableConfigServer
-public class ConfigServerApplication {
+@EnableEurekaClient
+@EnableCircuitBreaker
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

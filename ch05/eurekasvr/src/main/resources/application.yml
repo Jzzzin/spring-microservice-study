@@ -1,0 +1,14 @@
+#Default port is 8761
+server:
+  port: 8761
+
+# eureka 설정
+eureka:
+  client:
+    register-with-eureka: false # 유레카 서비스 등록 안함
+    fetch-registry: false # 유레카 서비스 목록 캐싱 안함
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # 유레카 서비스 위치 /eureka/ 안붙이면 에러남
+  server:
+    wait-time-in-ms-when-sync-empty: 0 # 서비스 등록 대기 시간
+    enable-self-preservation: false # 자기 보호 모드 비활성화 (클라이언트 셧다운 시 등록해제 실행)

@@ -5,4 +5,8 @@
 - https://seokr.tistory.com/670
 - https://smallgiant.tistory.com/19
 
-2. postgres DB의 경우 docker-compose 를 통해서 설치한다
+2. postgres DB의 경우 
+docker/common 의 docker-compose 를 통해서 실행한다
+
+3. 개별 application 테스트를 위해서 
+local machine hosts 파일에 127.0.0.1 database host를 추가한다

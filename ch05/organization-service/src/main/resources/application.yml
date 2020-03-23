@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+eureka:
+  instance:
+    prefer-ip-address: true # eureka 호스트 네임에 ip 등록
+  client:
+    register-with-eureka: true # eureka 서비스 등록
+    fetch-registry: true # eureka registry 캐싱
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # eureka 서비스 위치
+
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.bloknoma: DEBUG
+
+#actuator shutdown 관련 설정 (유레카 클라이언트 종료 테스트 위해서) 실제로 셧다운 수행하면 에러가 나는데 이는 셧다운 시 DB 테이블도 drop 하기 때문이다
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, shutdown
+  endpoint:
+    shutdown:
+      enabled: true

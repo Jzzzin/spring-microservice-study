@@ -18,7 +18,7 @@ public class License {
     @Column(name = "license_type", nullable = false)
     private String licenseType;
 
-    @Column(name = "license_mas", nullable = false)
+    @Column(name = "license_max", nullable = false)
     private Integer licenseMax;
 
     @Column(name = "license_allocated", nullable = false)

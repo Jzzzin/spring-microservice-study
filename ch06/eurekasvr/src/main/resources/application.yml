@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761 # eureka location
+      defaultZone: http://localhost:8761/eureka/ # eureka location /eureka/ 붙여야 됨
     register-with-eureka: false # eureka service 등록
     fetch-registry: false # eureka registry 캐싱
   server:

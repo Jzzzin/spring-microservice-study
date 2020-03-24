@@ -12,4 +12,4 @@ logging:
   level:
     com.netflix: WARN
     org.springframework.web: WARN
-    com.thoughtmechanix: DEBUG
+    com.bloknoma: DEBUG

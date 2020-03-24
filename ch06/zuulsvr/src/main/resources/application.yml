@@ -1,7 +1,7 @@
 server:
   port: 5555
 
-#actuator 모든 경로 노출
+#actuator 모든 경로 노출, zuul routes 경로 확인 위해서 필요
 management:
   endpoints:
     web:
@@ -12,7 +12,7 @@ management:
 logging:
   level:
     com.netflix: WARN
-    com.springframework.web: WARN
+    org.springframework.web: WARN
     com.bloknoma: DEBUG
 
 eureka:
@@ -22,10 +22,24 @@ eureka:
     register-with-eureka: true # eureka service 등록
     fetch-registry: true # eurek registry 캐싱
     service-url:
-      defaultZone: http://locahost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
-#zuul:
-#  prefix: /api
-#  routes:
-#    organizationservice: /organization/**
+zuul:
+#  ignored-services: '*' # eureka 에 등록된 서비스 경로 제외
+  prefix: /api # 서비스 접두어 설정
+  routes: # 수동 경로 매핑
+    organizationservice: /organization/**
+#    licensingservice: /licensing/**
+#    licensestatic:
+#      path: /licensestatic/** # 정적경로
+#      serviceId: licensestatic # 리본 서비스 ID
+##      url: http://licenseservice-static:8081 # 직접 호출 경로
+#
+#ribbon:
+#  eureka:
+#    enabled: false # 리본 유레카 지원 비활성화
+#licensestatic:
+#  ribbon:
+#    listOfServers: http://licenseservice-static:8081, http://licenseservice-static2:8082
+
 

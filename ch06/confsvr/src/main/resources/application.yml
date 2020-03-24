@@ -1,7 +1,6 @@
 server:
   port: 8888
 
-#Git-based
 spring:
   cloud:
     config:
@@ -10,19 +9,16 @@ spring:
       server:
         git:
           uri: https://github.com/Jzzzin/spring-micro-study/
-          searchPaths: licensingservice, organizationservice
+          searchPaths: licensingservice, organizationservice, zuulservice, specialroutesservice
           username: Jzzzin
           password: GITHUBhedgehog3#
 
-##Classpath and file-based
-#spring:
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:config/licensingservice, classpath:config/organizationservice
+#Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.bloknoma: DEBUG
 
 # eureka 설정
 eureka:

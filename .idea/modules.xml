@@ -7,19 +7,25 @@
       <module fileurl="file://$PROJECT_DIR$/ch03/ch03.iml" filepath="$PROJECT_DIR$/ch03/ch03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/ch04.iml" filepath="$PROJECT_DIR$/ch04/ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/ch05.iml" filepath="$PROJECT_DIR$/ch05/ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/ch06.iml" filepath="$PROJECT_DIR$/ch06/ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" filepath="$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/confsvr/confsvr-ch05.iml" filepath="$PROJECT_DIR$/ch05/confsvr/confsvr-ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/confsvr/confsvr-ch06.iml" filepath="$PROJECT_DIR$/ch06/confsvr/confsvr-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/eurekasvr/eurekasvr-ch05.iml" filepath="$PROJECT_DIR$/ch05/eurekasvr/eurekasvr-ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/eurekasvr/eurekasvr-ch06.iml" filepath="$PROJECT_DIR$/ch06/eurekasvr/eurekasvr-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" filepath="$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" filepath="$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/licensing-service/licensing-service-ch05.iml" filepath="$PROJECT_DIR$/ch05/licensing-service/licensing-service-ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/licensing-service/licensing-service-ch06.iml" filepath="$PROJECT_DIR$/ch06/licensing-service/licensing-service-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" filepath="$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" filepath="$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" filepath="$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-micro-study.iml" filepath="$PROJECT_DIR$/spring-micro-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/zuulsvr/zuulsvr-ch06.iml" filepath="$PROJECT_DIR$/ch06/zuulsvr/zuulsvr-ch06.iml" />
     </modules>
   </component>
 </project>

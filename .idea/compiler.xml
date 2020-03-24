@@ -9,17 +9,22 @@
         <module name="confsvr-ch03" />
         <module name="confsvr-ch04" />
         <module name="confsvr-ch05" />
+        <module name="confsvr-ch06" />
         <module name="eurekasvr-ch04" />
         <module name="eurekasvr-ch05" />
+        <module name="eurekasvr-ch06" />
         <module name="licensing-service" />
         <module name="licensing-service-ch02" />
         <module name="licensing-service-ch03" />
         <module name="licensing-service-ch04" />
         <module name="licensing-service-ch05" />
+        <module name="licensing-service-ch06" />
         <module name="organization-service-ch04" />
         <module name="organization-service-ch05" />
+        <module name="organization-service-ch06" />
         <module name="simpleservice" />
         <module name="spring-micro-study" />
+        <module name="zuulsvr-ch06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,21 +33,27 @@
       <module name="ch03" target="1.8" />
       <module name="ch04" target="1.8" />
       <module name="ch05" target="1.8" />
+      <module name="ch06" target="1.8" />
       <module name="confsvr-ch03" target="1.8" />
       <module name="confsvr-ch04" target="1.8" />
       <module name="confsvr-ch05" target="1.8" />
+      <module name="confsvr-ch06" target="1.8" />
       <module name="eurekasvr-ch04" target="1.8" />
       <module name="eurekasvr-ch05" target="1.8" />
+      <module name="eurekasvr-ch06" target="1.8" />
       <module name="licensing-service" target="1.8" />
       <module name="licensing-service-ch02" target="1.8" />
       <module name="licensing-service-ch03" target="1.8" />
       <module name="licensing-service-ch04" target="1.8" />
       <module name="licensing-service-ch05" target="1.8" />
+      <module name="licensing-service-ch06" target="1.8" />
       <module name="licensingservice" target="1.8" />
       <module name="organization-service-ch04" target="1.8" />
       <module name="organization-service-ch05" target="1.8" />
+      <module name="organization-service-ch06" target="1.8" />
       <module name="simpleservice" target="1.8" />
       <module name="spring-micro-study" target="1.5" />
+      <module name="zuulsvr-ch06" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

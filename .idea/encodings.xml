@@ -18,5 +18,11 @@
     <file url="file://$PROJECT_DIR$/ch05/eurekasvr" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch05/licensing-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch05/organization-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/confsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/eurekasvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/organization-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/zuulsvr" charset="UTF-8" />
   </component>
 </project>

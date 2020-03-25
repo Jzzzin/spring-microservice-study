@@ -1,7 +1,7 @@
-zuul.ignored-service: '*'
+#zuul.ignored-services: '*'
 zuul.prefix: /api
 zuul.routes.organizationservice: /organization/**
-zuul.routes.licensingervice: /licensing/**
+zuul.routes.licensingservice: /licensing/**
 zuul.routes.authenticationservice: /auth/**
 #정적 URL 매핑
 #zuul.routes.licensestatic.path: /licensestatic/**
@@ -9,6 +9,7 @@ zuul.routes.authenticationservice: /auth/**
 #zuul.routes.licensestatic.serviceId: licensestatic
 #zuul.routes.licensestatic.ribbon.listOfServers: http://licenseservice-static1:8081, http://licenseservice-static2:8082
 #ribbon.eureka.enabled: false
+zuul.sensitiveHeaders: Cookie, Set-Cookie
 zuul.debug.request: true
 #hystrix timeout 시간 변경(default 1000)
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

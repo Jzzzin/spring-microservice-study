@@ -19,12 +19,13 @@
     </parent>
 
     <modules>
-
         <module>eurekasvr</module>
         <module>confsvr</module>
         <module>zuulsvr</module>
         <module>organization-service</module>
         <module>licensing-service</module>
+        <module>orgservice-new</module>
+        <module>specialroutes-service</module>
     </modules>
 
     <build>

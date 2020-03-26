@@ -53,10 +53,12 @@
         </dependency>
 
         <!-- feign 안쓰는듯 -->
+<!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+-->
 
         <!-- config -->
         <dependency>

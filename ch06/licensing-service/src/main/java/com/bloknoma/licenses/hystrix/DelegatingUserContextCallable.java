@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 import java.util.concurrent.Callable;
 
 public final class DelegatingUserContextCallable<V> implements Callable<V> {
+
     private static final Logger logger = LoggerFactory.getLogger(DelegatingUserContextCallable.class);
 
     private final Callable<V> delegate;

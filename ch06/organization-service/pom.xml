@@ -52,11 +52,13 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- feign ? -->
+        <!-- feign 사용안함 -->
+<!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+-->
 
         <!-- config -->
         <dependency>

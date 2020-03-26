@@ -36,13 +36,13 @@ public class LicenseServiceController {
     @RequestMapping(value = "/{licenseId}", method = RequestMethod.GET)
     public License getLicenses(@PathVariable("organizationId") String organizationId,
                                @PathVariable("licenseId") String licenseId) throws InterruptedException {
-        logger.debug("Found bn-correlation-id in license-service-controller: {}",
+        logger.debug("Found {} in license-service-controller: {}", UserContext.CORRELATION_ID,
                 request.getHeader(UserContext.CORRELATION_ID));
         return licenseService.getLicense(organizationId, licenseId);
     }
 
     @RequestMapping(value = "/{licenseId}", method = RequestMethod.PUT)
-    public void updateLicenser(@PathVariable("licenseId") String licenseId,
+    public void updateLicenses(@PathVariable("licenseId") String licenseId,
                                @RequestBody License license) {
         licenseService.updateLicense(license);
     }

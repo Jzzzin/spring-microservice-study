@@ -22,7 +22,11 @@
         <module name="organization-service-ch04" />
         <module name="organization-service-ch05" />
         <module name="organization-service-ch06" />
+        <module name="orgservice-new" />
+        <module name="orgservice-new-ch06" />
         <module name="simpleservice" />
+        <module name="specialroutes-service" />
+        <module name="specialroutes-service-ch06" />
         <module name="spring-micro-study" />
         <module name="zuulsvr-ch06" />
       </profile>
@@ -51,7 +55,11 @@
       <module name="organization-service-ch04" target="1.8" />
       <module name="organization-service-ch05" target="1.8" />
       <module name="organization-service-ch06" target="1.8" />
+      <module name="orgservice-new" target="1.8" />
+      <module name="orgservice-new-ch06" target="1.8" />
       <module name="simpleservice" target="1.8" />
+      <module name="specialroutes-service" target="1.5" />
+      <module name="specialroutes-service-ch06" target="1.8" />
       <module name="spring-micro-study" target="1.5" />
       <module name="zuulsvr-ch06" target="1.8" />
     </bytecodeTargetLevel>

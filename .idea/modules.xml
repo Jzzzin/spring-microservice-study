@@ -23,7 +23,9 @@
       <module fileurl="file://$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" filepath="$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" filepath="$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/orgservice-new/orgservice-new-ch06.iml" filepath="$PROJECT_DIR$/ch06/orgservice-new/orgservice-new-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" filepath="$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/specialroutes-service/specialroutes-service-ch06.iml" filepath="$PROJECT_DIR$/ch06/specialroutes-service/specialroutes-service-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-micro-study.iml" filepath="$PROJECT_DIR$/spring-micro-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch06/zuulsvr/zuulsvr-ch06.iml" filepath="$PROJECT_DIR$/ch06/zuulsvr/zuulsvr-ch06.iml" />
     </modules>

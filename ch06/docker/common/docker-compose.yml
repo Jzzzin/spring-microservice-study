@@ -13,15 +13,15 @@ services:
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
       EUREKASERVER_PORT: "8761"
       ENCRYPT_KEY: "IMSYMMETRIC"
-  configserver2:
-    image: jin/bn-confsvr:ch06
-    ports:
-      - "8889:8889"
-    environment:
-      SERVER_PORT: "8889"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT: "8761"
-      ENCRYPT_KEY: "IMSYMMETRIC"
+#  configserver2:
+#    image: jin/bn-confsvr:ch06
+#    ports:
+#      - "8889:8889"
+#    environment:
+#      SERVER_PORT: "8889"
+#      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+#      EUREKASERVER_PORT: "8761"
+#      ENCRYPT_KEY: "IMSYMMETRIC"
   zuulserver:
     image: jin/bn-zuulsvr:ch06
     ports:
@@ -71,19 +71,19 @@ services:
       CONFIGSERVER_PORT: "8888"
       DATABASESERVER_PORT: "5432"
       ENCRYPT_KEY: "IMSYMMETRIC"
-  organizationservice2:
-    image: jin/bn-organization-service:ch06
-    ports:
-      - "8086:8086"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8086"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT: "8761"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      CONFIGSERVER_PORT: "8888"
-      DATABASESERVER_PORT: "5432"
-      ENCRYPT_KEY: "IMSYMMETRIC"
+#  organizationservice2:
+#    image: jin/bn-organization-service:ch06
+#    ports:
+#      - "8086:8086"
+#    environment:
+#      PROFILE: "default"
+#      SERVER_PORT: "8086"
+#      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+#      EUREKASERVER_PORT: "8761"
+#      CONFIGSERVER_URI: "http://configserver:8888"
+#      CONFIGSERVER_PORT: "8888"
+#      DATABASESERVER_PORT: "5432"
+#      ENCRYPT_KEY: "IMSYMMETRIC"
   orgservice-new:
     image: jin/bn-orgservice-new:ch06
     ports:

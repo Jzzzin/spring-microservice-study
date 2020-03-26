@@ -5,6 +5,7 @@ import com.bloknoma.licenses.config.ServiceConfig;
 import com.bloknoma.licenses.model.License;
 import com.bloknoma.licenses.model.Organization;
 import com.bloknoma.licenses.repository.LicenseRepository;
+import com.bloknoma.licenses.utils.UserContextHolder;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.slf4j.Logger;
@@ -86,6 +87,8 @@ public class LicenseService {
     }
 
     private List<License> buildFallbackLicenseList(String organizationId) {
+        // fallback log 추가
+        logger.debug("Correlation id In buildFallbackLicenseList method : {}", UserContextHolder.getContext().getCorrelationId());
         List<License> fallbackList = new ArrayList<>();
         License license = new License()
                 .withId("0000000-00-00000")

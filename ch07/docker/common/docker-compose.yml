@@ -1,0 +1,78 @@
+version: '2'
+services:
+  eurekaserver:
+    image: jin/bn-eurekasvr:ch07
+    ports:
+      - "8761:8761"
+  configserver:
+    image: jin/bn-confsvr:ch07
+    ports:
+      - "8888:8888"
+    environment:
+      SERVER_PORT: "8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: 8761
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  zuulserver:
+    image: jin/bn-zuulsvr:ch07
+    ports:
+      - "5555:5555"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "5555"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: 8761
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+  database:
+    image: postgres:9.5
+    ports:
+      - "5432:5432"
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=p0stgr@s
+        - POSTGRES_DB=eagle_eye_local
+  authenticationservice:
+    image: jin/bn-authentication-service:ch07
+    ports:
+      - "8901:8901"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8901"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: 8761
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+      DATABASE_PORT: 5432
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  licensingservice:
+    image: jin/bn-lincensing-service:ch07
+    ports:
+      - "8082:8082"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8082"
+      ES_PORT: 9200
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: 8761
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+      DATABASE_PORT: 5432
+      AUTHSERVER_URI: "http://authenticationservice:8901/auth/user"
+      AUTHSERVER_PORT: 8901
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  organizationservice:
+    image: jin/bn-organization-service:ch07
+    ports:
+      - "8085:8085"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8085"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: 8761
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+      DATABASE_PORT: 5432
+      AUTHSERVER_URI: "http://authenticationservice:8901/auth/user"
+      AUTHSERVER_PORT: 8901
+      ENCRYPT_KEY: "IMSYMMETRIC"

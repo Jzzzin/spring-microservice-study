@@ -26,5 +26,14 @@
     <file url="file://$PROJECT_DIR$/ch06/orgservice-new" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch06/specialroutes-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch06/zuulsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/authentication-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/confsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/eurekasvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/organization-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/orgservice-new" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/specialroutes-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/zuulsvr" charset="UTF-8" />
   </component>
 </project>

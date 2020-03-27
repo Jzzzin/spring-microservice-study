@@ -14,6 +14,6 @@ zuul.debug.request: true
 #hystrix timeout 시간 변경(default 1000)
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 #hystrix.command.licensingservice.execution.isolation.thread.timeoutInMilliseconds: 2000
-#ribbon timeout 시간 변경(default 5000)
+#ribbon timeout 시간 변경(default 5000) default 1초 인듯
 ribbon.ReadTimeout: 4000
 

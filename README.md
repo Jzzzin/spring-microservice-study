@@ -8,5 +8,13 @@
 2. postgres DB의 경우 
 docker/common 의 docker-compose 를 통해서 실행한다
 
-3. 개별 application 테스트를 위해서 
-local machine hosts 파일에 127.0.0.1 database host를 추가한다
+3. 개별 application 테스트 시 database를 찾기 위해서 
+C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 database 를 추가한다
+(docker 사용 시 service name 기반으로 찾아감)
+
+4. zuul route filter 테스트 시 organization-new 를 찾기 위해서 
+C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 orgservice-new 를 추가한다
+
+5. OAuth2RestTemplate 사용 시 loadbalalced 되지 않으므로 
+license service 에서 zuul service 찾기 위해서 
+C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 zuulserver 를 추가한다

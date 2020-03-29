@@ -80,10 +80,12 @@
         </dependency>
 
         <!-- cloud security -->
+<!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-security</artifactId>
         </dependency>
+-->
 
         <!-- security -->
         <dependency>

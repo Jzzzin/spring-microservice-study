@@ -9,6 +9,8 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 
+// JWT 사용 시 주석처리
+/*
 @Configuration
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
@@ -26,7 +28,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .secret(PasswordEncoderFactories.createDelegatingPasswordEncoder()
                         .encode("thisissecret")) // secret key
                 .authorizedGrantTypes("refresh_token", "password", "client_credentials") // grant type
-                .scopes("webclent", "mobileclient"); // scope
+                .scopes("webclient", "mobileclient"); // scope
     }
 
     // WebSecurityConfigurer 기반으로 endpoint 설정
@@ -37,3 +39,4 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .userDetailsService(userDetailsService);
     }
 }
+*/

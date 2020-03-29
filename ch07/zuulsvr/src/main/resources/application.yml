@@ -27,7 +27,13 @@ eureka:
 #zuul:
 #  prefix: /api # 서비스 접두어 설정
 #  routes: # 수동 경로 매핑
-#    organizationservice: /organization/**
+#    orgservice-new:
+#      serviceId: orgservice-new
+#      url: http://orgservice-new:8087
 #    licensingservice: /licensing/**
+#orgservice-new:
+#  ribbon:
+#    listOfServers :  http://orgservice-new:8087
+
 
 

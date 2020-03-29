@@ -22,6 +22,8 @@ public class OrganizationRestTemplateClient {
         logger.debug("In Licensing Service.getOrganization: {}",
                 UserContextHolder.getContext().getCorrelationId());
 
+        // OAuth2RestTemplate @LoadBalanced 하지 않았기 때문에 zuulservice 를 찾지 못한다.
+        // zuulserver host 파일에 추가해야됨
         ResponseEntity<Organization> restExchange = restTemplate.exchange(
                 "http://zuulserver:5555/api/organization/v1/organizations/{organizationId}",
                 HttpMethod.GET, null, Organization.class, organizationId);

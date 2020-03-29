@@ -9,6 +9,7 @@ zuul.routes.authenticationservice: /auth/**
 #zuul.routes.licensestatic.serviceId: licensestatic
 #zuul.routes.licensestatic.ribbon.listOfServers: http://licenseservice-static1:8081, http://licenseservice-static2:8082
 #ribbon.eureka.enabled: false
+#Cookie, Set-Cookie header 전파 차단 (Authorization 전파 허용, default 모두 전파하지 않음)
 zuul.sensitiveHeaders: Cookie, Set-Cookie
 zuul.debug.request: true
 #hystrix timeout 시간 변경(default 1000)
@@ -16,4 +17,5 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 #hystrix.command.licensingservice.execution.isolation.thread.timeoutInMilliseconds: 2000
 #ribbon timeout 시간 변경(default 5000) default 1초 인듯
 ribbon.ReadTimeout: 4000
+signing.key: "345345fsdfsf5345"
 

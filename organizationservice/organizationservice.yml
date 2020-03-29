@@ -13,3 +13,4 @@ spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: "true"
 spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: "false"
 # entity 에 따라 create table 수행 후 classpath: 에 import.sql 이 있으면 수행함
 spring.jpa.hibernate.ddl-auto: "create-drop"
+signing.key: "345345fsdfsf5345"

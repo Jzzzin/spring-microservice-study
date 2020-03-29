@@ -1,10 +1,10 @@
 server:
   port: 8087
 
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://localhost:8901/auth/user
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:8901/auth/user
 
 #Setting the logging levels for the service
 logging:
@@ -17,7 +17,7 @@ eureka:
   instance:
     prefer-ip-address: true # eureka 호스트 네임에 ip 등록
   client:
-    register-with-eureka: true # eureka 서비스 등록
+    register-with-eureka: false # eureka 서비스 등록 / special route 를 통해서만 들어와야 하므로 eureka 에 등록하지 않는다
     fetch-registry: true # eureka registry 캐싱
     service-url:
       defaultZone: http://localhost:8761/eureka/ # eureka 서비스 위치

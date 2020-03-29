@@ -4,13 +4,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserContext {
+    public static final String AUTH_TOKEN = "Authorization";
     public static final String CORRELATION_ID = "bn-correlation-id";
-    public static final String AUTH_TOKEN = "bn-auth-token";
     public static final String USER_ID = "bn-user-id";
     public static final String ORG_ID = "bn-org-id";
 
-    private String correlationId = new String();
     private String authToken = new String();
+    private String correlationId = new String();
     private String userId = new String();
     private String orgId = new String();
 

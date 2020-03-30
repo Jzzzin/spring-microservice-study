@@ -1,10 +1,11 @@
 server:
   port: 8085
 
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://localhost:8901/auth/user
+#JWT tokenservice 사용 시 auth uri 호출하지 않는다
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:8901/auth/user
 
 #Setting the logging levels for the service
 logging:

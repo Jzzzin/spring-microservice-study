@@ -21,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.ProxyRequestHelper;
+import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
@@ -55,6 +56,10 @@ public class SpecialRoutesFilter extends ZuulFilter {
     @Autowired
     private ProxyRequestHelper helper;
 
+    // special routes service 확인 용
+    @Autowired
+    private ZuulProperties zuulProperties;
+
     @Override
     public String filterType() {
         return FilterUtils.ROUTE_FILTER_TYPE;
@@ -70,9 +75,16 @@ public class SpecialRoutesFilter extends ZuulFilter {
         return SHOULD_FILTER;
     }
 
+
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
+
+        // check special routes service running
+        if (zuulProperties.getRoutes().get("specialroutesservice") == null) {
+            logger.debug("special routes services is not running");
+            return null;
+        }
 
         // special routes service call
         AbTestingRoute abTestingRoute = getAbRoutingInfo(filterUtils.getServiceId());
@@ -92,9 +104,8 @@ public class SpecialRoutesFilter extends ZuulFilter {
                 ctx.setRouteHost(host);
                 logger.debug("RouteHost: {}", host.toString());
             } catch (MalformedURLException ex) {
-                // Skip Error
+                ex.printStackTrace();
             }
-
         }
 
         return null;
@@ -214,18 +225,18 @@ public class SpecialRoutesFilter extends ZuulFilter {
         switch (verb.toUpperCase()) {
             case "POST":
                 HttpPost httpPost = new HttpPost(uri);
-                httpPost.setEntity(entity);
                 httpRequest = httpPost;
+                httpPost.setEntity(entity);
                 break;
             case "PUT":
                 HttpPut httpPut = new HttpPut(uri);
-                httpPut.setEntity(entity);
                 httpRequest = httpPut;
+                httpPut.setEntity(entity);
                 break;
             case "PATCH":
                 HttpPatch httpPatch = new HttpPatch(uri);
-                httpPatch.setEntity(entity);
                 httpRequest = httpPatch;
+                httpPatch.setEntity(entity);
                 break;
             default:
                 httpRequest = new BasicHttpRequest(verb, uri);

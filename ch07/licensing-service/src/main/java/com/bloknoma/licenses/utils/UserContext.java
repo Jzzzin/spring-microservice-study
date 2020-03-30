@@ -14,20 +14,20 @@ public class UserContext {
     private String userId = new String();
     private String orgId = new String();
 
-    public String getCorrelationId() {
-        return correlationId;
-    }
-
-    public void setCorrelationId(String correlationId) {
-        this.correlationId = correlationId;
-    }
-
     public String getAuthToken() {
         return authToken;
     }
 
     public void setAuthToken(String authToken) {
         this.authToken = authToken;
+    }
+
+    public String getCorrelationId() {
+        return correlationId;
+    }
+
+    public void setCorrelationId(String correlationId) {
+        this.correlationId = correlationId;
     }
 
     public String getUserId() {

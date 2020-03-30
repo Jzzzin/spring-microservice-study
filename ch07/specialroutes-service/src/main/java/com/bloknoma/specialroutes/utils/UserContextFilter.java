@@ -19,10 +19,13 @@ public class UserContextFilter implements Filter {
 
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 
-        UserContextHolder.getContext()
-                .setCorrelationId(httpServletRequest.getHeader(UserContext.CORRELATION_ID));
+        logger.debug("I am entering the special routes service id with auth token: {}",
+                httpServletRequest.getHeader(UserContext.AUTH_TOKEN));
+
         UserContextHolder.getContext()
                 .setAuthToken(httpServletRequest.getHeader(UserContext.AUTH_TOKEN));
+        UserContextHolder.getContext()
+                .setCorrelationId(httpServletRequest.getHeader(UserContext.CORRELATION_ID));
         UserContextHolder.getContext()
                 .setUserId(httpServletRequest.getHeader(UserContext.USER_ID));
         UserContextHolder.getContext()

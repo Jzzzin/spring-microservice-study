@@ -79,7 +79,7 @@
             <version>42.2.4</version>
         </dependency>
 
-        <!-- cloud security -->
+        <!-- cloud security 사용하면 security filter 가 설정됨 -->
 <!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -135,7 +135,7 @@
                     <dockerDirectory>${basedir}/target/dockerfile</dockerDirectory>
                     <resources>
                         <resource>
-                            <targetPaht>/</targetPaht>
+                            <targetPath>/</targetPath>
                             <directory>${project.build.directory}</directory>
                             <include>${project.build.finalName}.jar</include>
                         </resource>

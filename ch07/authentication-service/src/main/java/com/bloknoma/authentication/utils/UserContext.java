@@ -9,18 +9,10 @@ public class UserContext {
     public static final String USER_ID = "bn-user-id";
     public static final String ORG_ID = "bn-org-id";
 
-    private String correlationId = new String();
     private String authToken = new String();
+    private String correlationId = new String();
     private String userId = new String();
     private String orgId = new String();
-
-    public String getCorrelationId() {
-        return correlationId;
-    }
-
-    public void setCorrelationId(String correlationId) {
-        this.correlationId = correlationId;
-    }
 
     public String getAuthToken() {
         return authToken;
@@ -28,6 +20,14 @@ public class UserContext {
 
     public void setAuthToken(String authToken) {
         this.authToken = authToken;
+    }
+
+    public String getCorrelationId() {
+        return correlationId;
+    }
+
+    public void setCorrelationId(String correlationId) {
+        this.correlationId = correlationId;
     }
 
     public String getUserId() {

@@ -29,7 +29,7 @@ public class FilterUtils {
         ctx.addZuulRequestHeader(CORRELATION_ID, correlationId);
     }
 
-    public String getUserId() {
+    public final String getUserId() {
         RequestContext ctx = RequestContext.getCurrentContext();
 
         if (ctx.getRequest().getHeader(USER_ID) != null) {
@@ -44,7 +44,7 @@ public class FilterUtils {
         ctx.addZuulRequestHeader(USER_ID, userId);
     }
 
-    public String getOrgId() {
+    public final String getOrgId() {
         RequestContext ctx = RequestContext.getCurrentContext();
 
         if (ctx.getRequest().getHeader(ORG_ID) != null) {

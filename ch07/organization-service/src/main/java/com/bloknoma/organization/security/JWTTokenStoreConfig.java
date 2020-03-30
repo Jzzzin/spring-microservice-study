@@ -1,12 +1,11 @@
-package com.bloknoma.authentication.security;
+package com.bloknoma.organization.security;
 
-import com.bloknoma.authentication.config.ServiceConfig;
+import com.bloknoma.organization.config.ServiceConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
-import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
@@ -23,7 +22,7 @@ public class JWTTokenStoreConfig {
         return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
-    // JWT 와 OAuth2 서버 사이의 변환기
+    // token converter
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
@@ -33,7 +32,6 @@ public class JWTTokenStoreConfig {
     }
 
     // token service
-    // @Primary 자동 주입 우선 순위 설정
     @Bean
     @Primary
     public DefaultTokenServices tokenServices() {
@@ -41,11 +39,5 @@ public class JWTTokenStoreConfig {
         defaultTokenServices.setTokenStore(tokenStore());
         defaultTokenServices.setSupportRefreshToken(true);
         return defaultTokenServices;
-    }
-
-    // token enhancer
-    @Bean
-    public TokenEnhancer jwtTokenEnhancer() {
-        return new JWTTokenEnhancer();
     }
 }

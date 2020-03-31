@@ -15,12 +15,6 @@ public class JWTTokenStoreConfig {
     @Autowired
     private ServiceConfig serviceConfig;
 
-    // token store
-    @Bean
-    public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
-    }
-
     // token converter
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
@@ -28,6 +22,12 @@ public class JWTTokenStoreConfig {
         // 서명 키 정의
         converter.setSigningKey(serviceConfig.getJwtSigningKey());
         return converter;
+    }
+
+    // token store
+    @Bean
+    public TokenStore tokenStore() {
+        return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
     // token service

@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "v1/organizations/{organizationId}/licenses")
 public class LicenseServiceController {
-
     private static final Logger logger = LoggerFactory.getLogger(LicenseServiceController.class);
 
     @Autowired

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "v1/organizations")
 public class OrganizationServiceController {
-
     private static final Logger logger = LoggerFactory.getLogger(OrganizationServiceController.class);
 
     @Autowired

@@ -1,0 +1,110 @@
+version: '2'
+services:
+  eurekaserver:
+    image: jin/bn-eurekasvr:ch08
+    ports:
+      - "8761:8761"
+  configserver:
+    image: jin/bn-confsvr:ch08
+    ports:
+      - "8888:8888"
+    environment:
+      SERVER_PORT: "8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  zuulserver:
+    image: jin/bn-zuulsvr:ch08
+    ports:
+      - "5555:5555"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "5555"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+  database:
+    image: postgres:9.5
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=p0stgr@s
+      - POSTGRES_DB=eagle_eye_local
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+#  kafkaserver:
+#    image: spotify/kafka
+#    ports:
+#      - "2181:2181"
+#      - "9092:9092"
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
+  kafkaserver:
+    image: wurstmeister/kafka
+    container_name: kafka
+    restart: always
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+#    links:
+#      - zookeeper:zookeeper
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  licensingservice:
+    image: jin/bn-licensing-service:ch08
+    ports:
+      - "8080:8080"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8080"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      ZUULSERVER_PORT : "5555"
+      DATABASE_PORT: "5432"
+      ZKSERVER_URI: "zookeeper"
+      KAFKASERVER_URI: "kafkaserver"
+      KAFKASERVER_PORT: "2181"
+      REDIS_PORT: "6379"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  organizationservice:
+    image: jin/bn-organization-service:ch08
+    ports:
+      - "8085:8085"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8085"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      ZUULSERVER_PORT : "5555"
+      DATABASE_PORT: "5432"
+      ZKSERVER_URI: "zookeeper"
+      KAFKASERVER_URI: "kafkaserver"
+      KAFKASERVER_PORT: "2181"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  authenticationservice:
+    image: jin/bn-authentication-service:ch08
+    ports:
+      - "8901:8901"
+    environment:
+      PROFILE: "default"
+      SERVER_PORT: "8901"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      DATABASE_PORT: "5432"
+      ENCRYPT_KEY: "IMSYMMETRIC"

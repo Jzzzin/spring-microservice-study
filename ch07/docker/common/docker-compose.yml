@@ -29,9 +29,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=p0stgr@s
-        - POSTGRES_DB=eagle_eye_local
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=p0stgr@s
+      - POSTGRES_DB=eagle_eye_local
   authenticationservice:
     image: jin/bn-authentication-service:ch07
     ports:

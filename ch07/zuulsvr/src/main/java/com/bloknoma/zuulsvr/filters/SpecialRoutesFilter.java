@@ -75,7 +75,6 @@ public class SpecialRoutesFilter extends ZuulFilter {
         return SHOULD_FILTER;
     }
 
-
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();

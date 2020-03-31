@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class OrganizationRestTemplateClient {
-
     private static final Logger logger = LoggerFactory.getLogger(OrganizationRestTemplateClient.class);
 
     @Autowired

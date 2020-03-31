@@ -7,16 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="authentication-service-ch07" />
+        <module name="authentication-service-ch08" />
         <module name="confsvr-ch03" />
         <module name="confsvr-ch04" />
         <module name="confsvr-ch05" />
         <module name="confsvr-ch06" />
         <module name="confsvr-ch07" />
+        <module name="confsvr-ch08" />
         <module name="eurekasvr" />
         <module name="eurekasvr-ch04" />
         <module name="eurekasvr-ch05" />
         <module name="eurekasvr-ch06" />
         <module name="eurekasvr-ch07" />
+        <module name="eurekasvr-ch08" />
         <module name="licensing-service" />
         <module name="licensing-service-ch02" />
         <module name="licensing-service-ch03" />
@@ -24,10 +27,12 @@
         <module name="licensing-service-ch05" />
         <module name="licensing-service-ch06" />
         <module name="licensing-service-ch07" />
+        <module name="licensing-service-ch08" />
         <module name="organization-service-ch04" />
         <module name="organization-service-ch05" />
         <module name="organization-service-ch06" />
         <module name="organization-service-ch07" />
+        <module name="organization-service-ch08" />
         <module name="orgservice-new" />
         <module name="orgservice-new-ch06" />
         <module name="orgservice-new-ch07" />
@@ -38,10 +43,12 @@
         <module name="spring-micro-study" />
         <module name="zuulsvr-ch06" />
         <module name="zuulsvr-ch07" />
+        <module name="zuulsvr-ch08" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="authentication-service-ch07" target="1.8" />
+      <module name="authentication-service-ch08" target="1.8" />
       <module name="ch01" target="1.8" />
       <module name="ch02" target="1.8" />
       <module name="ch03" target="1.8" />
@@ -49,16 +56,19 @@
       <module name="ch05" target="1.8" />
       <module name="ch06" target="1.8" />
       <module name="ch07" target="1.8" />
+      <module name="ch08" target="1.8" />
       <module name="confsvr-ch03" target="1.8" />
       <module name="confsvr-ch04" target="1.8" />
       <module name="confsvr-ch05" target="1.8" />
       <module name="confsvr-ch06" target="1.8" />
       <module name="confsvr-ch07" target="1.8" />
+      <module name="confsvr-ch08" target="1.8" />
       <module name="eurekasvr" target="1.5" />
       <module name="eurekasvr-ch04" target="1.8" />
       <module name="eurekasvr-ch05" target="1.8" />
       <module name="eurekasvr-ch06" target="1.8" />
       <module name="eurekasvr-ch07" target="1.8" />
+      <module name="eurekasvr-ch08" target="1.8" />
       <module name="licensing-service" target="1.8" />
       <module name="licensing-service-ch02" target="1.8" />
       <module name="licensing-service-ch03" target="1.8" />
@@ -66,11 +76,13 @@
       <module name="licensing-service-ch05" target="1.8" />
       <module name="licensing-service-ch06" target="1.8" />
       <module name="licensing-service-ch07" target="1.8" />
+      <module name="licensing-service-ch08" target="1.8" />
       <module name="licensingservice" target="1.8" />
       <module name="organization-service-ch04" target="1.8" />
       <module name="organization-service-ch05" target="1.8" />
       <module name="organization-service-ch06" target="1.8" />
       <module name="organization-service-ch07" target="1.8" />
+      <module name="organization-service-ch08" target="1.8" />
       <module name="orgservice-new" target="1.8" />
       <module name="orgservice-new-ch06" target="1.8" />
       <module name="orgservice-new-ch07" target="1.8" />
@@ -81,6 +93,7 @@
       <module name="spring-micro-study" target="1.5" />
       <module name="zuulsvr-ch06" target="1.8" />
       <module name="zuulsvr-ch07" target="1.8" />
+      <module name="zuulsvr-ch08" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

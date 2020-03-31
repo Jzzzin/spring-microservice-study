@@ -1,0 +1,36 @@
+server:
+  port: 8085
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output: # channel name
+          destination: orgChangeTopic # message queue(topic) name
+          content-type: application/json # message type
+      kafka: # kafka use
+        binder:
+          zkNodes: localhost # zookeeper location
+          brokers: localhost # kafka location
+
+#JWT tokenservice 사용 시 auth uri 호출하지 않는다
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:8901/auth/user
+
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.bloknoma: DEBUG
+
+eureka:
+  instance:
+    prefer-ip-address: true # eureka 호스트 네임에 ip 등록
+  client:
+    register-with-eureka: true # eureka 서비스 등록
+    fetch-registry: true # eureka registry 캐싱
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # eureka 서비스 위치

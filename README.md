@@ -18,3 +18,8 @@ C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 orgservice-new 를 추
 5. OAuth2RestTemplate 사용 시 loadbalalced 되지 않으므로 
 license service 에서 zuul service 찾기 위해서 
 C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 zuulserver 를 추가한다
+
+6. redis server 실행 시 hostname 이 redis 로 설정되어 있으므로 
+C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 redis 를 추가한다
+
+

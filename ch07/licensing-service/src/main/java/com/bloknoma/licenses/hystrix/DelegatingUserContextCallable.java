@@ -6,7 +6,6 @@ import com.bloknoma.licenses.utils.UserContextHolder;
 import java.util.concurrent.Callable;
 
 public final class DelegatingUserContextCallable<V> implements Callable<V> {
-
     private final Callable<V> delegate;
     private UserContext originalUserContext;
 

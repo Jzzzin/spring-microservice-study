@@ -8,3 +8,26 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=p0stgr@s
       - POSTGRES_DB=eagle_eye_local
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
+  kafkaserver:
+    image: wurstmeister/kafka
+    container_name: kafka
+    restart: always
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    links:
+      - zookeeper:zookeeper
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost # local 환경에서는 localhost 사용 해야 개별 서비스가 찾음
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181

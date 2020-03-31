@@ -8,7 +8,6 @@ import io.jsonwebtoken.Jwts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -42,7 +41,6 @@ public class TrackingFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        RequestContext ctx = RequestContext.getCurrentContext();
 
         if (isCorrelationIdPresent()) {
             logger.debug("{} found in tracking filter: {}",
@@ -55,6 +53,8 @@ public class TrackingFilter extends ZuulFilter {
 
         logger.debug("The organization id from the token is : " + getOrganizationId());
         filterUtils.setOrgId(getOrganizationId());
+
+        RequestContext ctx = RequestContext.getCurrentContext();
         logger.debug("Processing incoming request for {}", ctx.getRequest().getRequestURI());
         return null;
     }

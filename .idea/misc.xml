@@ -16,7 +16,13 @@
         <option value="$PROJECT_DIR$/ch06/pom.xml" />
         <option value="$PROJECT_DIR$/ch07/pom.xml" />
         <option value="$PROJECT_DIR$/ch08/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ch09/zipkinsvr/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

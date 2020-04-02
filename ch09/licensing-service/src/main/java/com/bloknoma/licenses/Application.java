@@ -1,0 +1,57 @@
+package com.bloknoma.licenses;
+
+import brave.sampler.Sampler;
+import com.bloknoma.licenses.config.ServiceConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+@EnableEurekaClient
+@EnableCircuitBreaker
+@EnableResourceServer
+public class Application {
+
+    @Autowired
+    private ServiceConfig serviceConfig;
+
+    @LoadBalanced
+    @Bean
+    public RestTemplate getRestTemplate() {
+        RestTemplate template = new RestTemplate();
+        return template;
+    }
+
+    // zipkin sampling frequency always
+    @Bean
+    public Sampler defaultSampler() {
+        return Sampler.ALWAYS_SAMPLE;
+    }
+
+    @Bean
+    public JedisConnectionFactory jedisConnectionFactory() {
+        JedisConnectionFactory jedisConnFactory = new JedisConnectionFactory();
+        jedisConnFactory.setHostName(serviceConfig.getRedisServer());
+        jedisConnFactory.setPort(serviceConfig.getRedisPort());
+        return jedisConnFactory;
+    }
+
+    @Bean
+    public RedisTemplate<String, Object> redisTemplate() {
+        RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+        template.setConnectionFactory(jedisConnectionFactory());
+        return template;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}

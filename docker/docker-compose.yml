@@ -31,3 +31,14 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: localhost # local 환경에서는 localhost 사용 해야 개별 서비스가 찾음
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+# local 에서 logspoout 대신 nxlog 사용함
+#  logspout:
+#    image: gliderlabs/logspout
+#    command: syslog://logs5.papertrailapp.com:49237
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+

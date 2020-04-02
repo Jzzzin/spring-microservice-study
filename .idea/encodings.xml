@@ -42,5 +42,13 @@
     <file url="file://$PROJECT_DIR$/ch08/licensing-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch08/organization-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch08/zuulsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/authentication-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/confsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/eurekasvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/licensing-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/organization-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/zipkinsvr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/zuulsvr" charset="UTF-8" />
   </component>
 </project>

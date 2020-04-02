@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: authenticationservice
+  profiles:
+    active: default
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: configserver
+#encrypt 관련 설정은 bootstrap.yml 에 해야 함 (mvn 으로 실행하는 경우)
+encrypt:
+  key: "IMSYMMETRIC"

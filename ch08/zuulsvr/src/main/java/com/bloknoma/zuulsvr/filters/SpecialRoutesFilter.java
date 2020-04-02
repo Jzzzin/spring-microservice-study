@@ -66,7 +66,6 @@ public class SpecialRoutesFilter extends ZuulFilter {
                 e.printStackTrace();
             }
         }
-
         return null;
     }
 
@@ -87,7 +86,6 @@ public class SpecialRoutesFilter extends ZuulFilter {
             if (ex.getStatusCode() == HttpStatus.NOT_FOUND) return null;
             throw ex;
         }
-
         return restExchange.getBody();
     }
 

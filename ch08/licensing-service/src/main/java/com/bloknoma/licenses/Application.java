@@ -46,7 +46,6 @@ public class Application {
             interceptors.add(new UserContextInterceptor());
             template.setInterceptors(interceptors);
         }
-
         return template;
     }
 

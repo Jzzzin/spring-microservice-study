@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch07/authentication-service/authentication-service-ch07.iml" filepath="$PROJECT_DIR$/ch07/authentication-service/authentication-service-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/authentication-service/authentication-service-ch08.iml" filepath="$PROJECT_DIR$/ch08/authentication-service/authentication-service-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/authentication-service/authentication-service-ch09.iml" filepath="$PROJECT_DIR$/ch09/authentication-service/authentication-service-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/authentication-service/authentication-service-ch10.iml" filepath="$PROJECT_DIR$/ch10/authentication-service/authentication-service-ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/ch01.iml" filepath="$PROJECT_DIR$/ch01/ch01.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02/ch02.iml" filepath="$PROJECT_DIR$/ch02/ch02.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/ch03.iml" filepath="$PROJECT_DIR$/ch03/ch03.iml" />
@@ -14,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch07/ch07.iml" filepath="$PROJECT_DIR$/ch07/ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/ch08.iml" filepath="$PROJECT_DIR$/ch08/ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/ch09.iml" filepath="$PROJECT_DIR$/ch09/ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/ch10.iml" filepath="$PROJECT_DIR$/ch10/ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" filepath="$PROJECT_DIR$/ch03/confsvr/confsvr-ch03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/confsvr/confsvr-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/confsvr/confsvr-ch05.iml" filepath="$PROJECT_DIR$/ch05/confsvr/confsvr-ch05.iml" />
@@ -21,12 +23,14 @@
       <module fileurl="file://$PROJECT_DIR$/ch07/confsvr/confsvr-ch07.iml" filepath="$PROJECT_DIR$/ch07/confsvr/confsvr-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/confsvr/confsvr-ch08.iml" filepath="$PROJECT_DIR$/ch08/confsvr/confsvr-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/confsvr/confsvr-ch09.iml" filepath="$PROJECT_DIR$/ch09/confsvr/confsvr-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/confsvr/confsvr-ch10.iml" filepath="$PROJECT_DIR$/ch10/confsvr/confsvr-ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" filepath="$PROJECT_DIR$/ch04/eurekasvr/eurekasvr-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/eurekasvr/eurekasvr-ch05.iml" filepath="$PROJECT_DIR$/ch05/eurekasvr/eurekasvr-ch05.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch06/eurekasvr/eurekasvr-ch06.iml" filepath="$PROJECT_DIR$/ch06/eurekasvr/eurekasvr-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch07/eurekasvr/eurekasvr-ch07.iml" filepath="$PROJECT_DIR$/ch07/eurekasvr/eurekasvr-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/eurekasvr/eurekasvr-ch08.iml" filepath="$PROJECT_DIR$/ch08/eurekasvr/eurekasvr-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/eurekasvr/eurekasvr-ch09.iml" filepath="$PROJECT_DIR$/ch09/eurekasvr/eurekasvr-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/eurekasvr/eurekasvr-ch10.iml" filepath="$PROJECT_DIR$/ch10/eurekasvr/eurekasvr-ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" filepath="$PROJECT_DIR$/ch02/licensing-service/licensing-service-ch02.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" filepath="$PROJECT_DIR$/ch03/licensing-service/licensing-service-ch03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/licensing-service/licensing-service-ch04.iml" />
@@ -35,12 +39,14 @@
       <module fileurl="file://$PROJECT_DIR$/ch07/licensing-service/licensing-service-ch07.iml" filepath="$PROJECT_DIR$/ch07/licensing-service/licensing-service-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/licensing-service/licensing-service-ch08.iml" filepath="$PROJECT_DIR$/ch08/licensing-service/licensing-service-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/licensing-service/licensing-service-ch09.iml" filepath="$PROJECT_DIR$/ch09/licensing-service/licensing-service-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/licensing-service/licensing-service-ch10.iml" filepath="$PROJECT_DIR$/ch10/licensing-service/licensing-service-ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" filepath="$PROJECT_DIR$/ch04/organization-service/organization-service-ch04.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" filepath="$PROJECT_DIR$/ch05/organization-service/organization-service-ch05.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" filepath="$PROJECT_DIR$/ch06/organization-service/organization-service-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch07/organization-service/organization-service-ch07.iml" filepath="$PROJECT_DIR$/ch07/organization-service/organization-service-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/organization-service/organization-service-ch08.iml" filepath="$PROJECT_DIR$/ch08/organization-service/organization-service-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/organization-service/organization-service-ch09.iml" filepath="$PROJECT_DIR$/ch09/organization-service/organization-service-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/organization-service/organization-service-ch10.iml" filepath="$PROJECT_DIR$/ch10/organization-service/organization-service-ch10.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch06/orgservice-new/orgservice-new-ch06.iml" filepath="$PROJECT_DIR$/ch06/orgservice-new/orgservice-new-ch06.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch07/orgservice-new/orgservice-new-ch07.iml" filepath="$PROJECT_DIR$/ch07/orgservice-new/orgservice-new-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" filepath="$PROJECT_DIR$/ch01/simpleservice/simpleservice.iml" />
@@ -51,6 +57,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch07/zuulsvr/zuulsvr-ch07.iml" filepath="$PROJECT_DIR$/ch07/zuulsvr/zuulsvr-ch07.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch08/zuulsvr/zuulsvr-ch08.iml" filepath="$PROJECT_DIR$/ch08/zuulsvr/zuulsvr-ch08.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch09/zuulsvr/zuulsvr-ch09.iml" filepath="$PROJECT_DIR$/ch09/zuulsvr/zuulsvr-ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch10/zuulsvr/zuulsvr-ch10.iml" filepath="$PROJECT_DIR$/ch10/zuulsvr/zuulsvr-ch10.iml" />
     </modules>
   </component>
 </project>

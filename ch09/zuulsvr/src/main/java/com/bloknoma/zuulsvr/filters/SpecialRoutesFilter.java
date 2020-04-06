@@ -51,7 +51,7 @@ public class SpecialRoutesFilter extends ZuulFilter {
     @Override
     public Object run() {
         if (zuulProperties.getRoutes().get("specialroutesservice") == null) {
-            logger.debug("special routes service is not running");
+            logger.debug("Special Routes Service is not running");
             return null;
         }
 
@@ -73,6 +73,8 @@ public class SpecialRoutesFilter extends ZuulFilter {
     }
 
     private AbTestingRoute getAbRoutingInfo(String serviceName) {
+        logger.debug(">>> In SpecialRoutesFilter.getAbRoutingInfo correlation id: {}",
+                filterUtils.getCorrelationId());
         ResponseEntity<AbTestingRoute> restExchange = null;
 
 /*      slueth 사용 하면 correlation id 가 전파되므로 header setting 필요 없다
@@ -82,8 +84,6 @@ public class SpecialRoutesFilter extends ZuulFilter {
 */
 
         try {
-            logger.debug(">>> In SpecialRoutesFilter.getAbRoutingInfo: {}",
-                    filterUtils.getCorrelationId());
             restExchange = restTemplate.exchange(
                     "http://specialroutesservice/v1/route/abtesting/{serviceName}",
                     HttpMethod.GET, null, AbTestingRoute.class, serviceName);

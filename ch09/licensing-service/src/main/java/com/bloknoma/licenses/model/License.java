@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "licenses")
 public class License {
+
     @Id
     @Column(name = "license_id", nullable = false)
     private String licenseId;

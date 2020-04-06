@@ -28,7 +28,4 @@ NXLog 설치한다.
 8. log 수집 위해 logging.file 프로퍼티 추가한다.
 (logback 설정을 사용하는 편이 낫다)
 
-9. zipkin server 실행 시 hostname 이 zipkin 으로 설정되어 있으므로 
-C:\Windows\System32\drivers\etc\hosts 파일에 127.0.0.1 zipkin 을 추가한다
-
-
+9. travis cli 설치 위해 ruby(Ruby+Devkit 2.6.6-1 (x64)) 설치한다. 

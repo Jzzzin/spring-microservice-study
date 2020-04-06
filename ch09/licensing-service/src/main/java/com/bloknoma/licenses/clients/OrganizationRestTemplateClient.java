@@ -21,16 +21,18 @@ public class OrganizationRestTemplateClient {
     RestTemplate restTemplate;
 
     @Autowired
-    Tracer tracer;
-
-    @Autowired
     OrganizationRedisRepository orgRedisRepo;
 
+    @Autowired
+    Tracer tracer;
+
     public Organization getOrganization(String organizationId) {
+        logger.debug(">>> In Licensing Service.getOrganization: {}",
+                tracer.currentSpan().context().traceIdString());
         Organization org = checkRedisCache(organizationId);
 
         if (org != null) {
-            logger.debug("I have successfully retrieved an organization {} from redis cache: {}",
+            logger.debug("I have successfully retrieved an organization {} from the redis cache: {}",
                     organizationId, org);
             return org;
         }

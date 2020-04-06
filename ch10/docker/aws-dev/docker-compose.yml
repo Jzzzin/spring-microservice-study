@@ -1,0 +1,157 @@
+version: '2'
+services:
+  eurekaserver:
+    image: jzzzin/bn-eurekasvr:${BUILD_NAME}
+#     mem_limit: 1073741824
+    ports:
+      - "8761:8761"
+
+  configserver:
+    image: jzzzin/bn-confsvr:${BUILD_NAME}
+#     mem_limit: 1073741824
+#    mem_limit: 1000000000
+    ports:
+      - "8888:8888"
+    links:
+      - "eurekaserver:eurekaserver"
+    environment:
+      SERVER_PORT: "8888"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+
+  zipkin:
+    image: openzipkin/zipkin
+    mem_limit: 1073741824
+    ports:
+      - "9411:9411"
+
+  logspout:
+    image: gliderlabs/logspout
+    mem_limit: 1073741824
+    command: syslog://logs5.papertrailapp.com:49237
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    mem_limit: 1073741824
+    container_name: zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: wurstmeister/kafka
+    mem_limit: 1073741824
+    container_name: kafka
+    restart: always
+    ports:
+      - "9092:9092"
+    links:
+      - "zookeeper:zookeeper"
+    environment:
+#      KAFKA_ADVERTISED_HOST_NAME: kafka
+      HOSTNAME_COMMAND: "curl http://169.254.169.254/latest/meta-data/local-ipv4"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+  zuulserver:
+    image: jzzzin/bn-zuulsvr:${BUILD_NAME}
+    mem_limit: 1073741824
+    ports:
+      - "5555:5555"
+    links:
+      - "eurekaserver:eurekaserver"
+      - "configserver:configserver"
+      - "zipkin:zipkin"
+    environment:
+      PROFILE: "aws-dev"
+      SERVER_PORT: "5555"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      ZIPKIN_URI: "http://zipkin:9411"
+      ZIPKIN_PORT: "9411"
+
+  authenticationservice:
+    image: jzzzin/bn-authentication-service:${BUILD_NAME}
+    mem_limit: 1073741824
+    ports:
+      - "8901:8901"
+    links:
+      - "eurekaserver:eurekaserver"
+      - "configserver:configserver"
+      - "zuulserver:zuulserver"
+    environment:
+      PROFILE: "aws-dev"
+      SERVER_PORT: "8901"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      DATABASE_PORT: "5432"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+
+  licensingservice:
+    image: jzzzin/bn-licensing-service:${BUILD_NAME}
+    mem_limit: 1073741824
+    ports:
+      - "8080:8080"
+    links:
+      - "eurekaserver:eurekaserver"
+      - "configserver:configserver"
+      - "zipkin:zipkin"
+      - "zookeeper:zookeeper"
+      - "kafka:kafka"
+      - "zuulserver:zuulserver"
+      - "authenticationservice:authenticationservice"
+    environment:
+      PROFILE: "aws-dev"
+      SERVER_PORT: "8080"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      DATABASE_PORT: "5432"
+      ZIPKIN_URI: "http://zipkin:9411"
+      ZIPKIN_PORT: "9411"
+      REDIS_PORT: "6379"
+      ZKSERVER_URI: "zookeeper"
+      ZOOKEEPER_PORT: "2181"
+      KAFKASERVER_URI: "kafka"
+      KAFKASERVER_PORT: "9092"
+      ZUULSERVER_PORT: "5555"
+      AUTHSERVER_URI: "http://authenticationservice:8901/auth/user"
+      ENCRYPT_KEY: "IMSYMMETRIC"
+
+  organizationservice:
+    image: jzzzin/bn-organization-service:${BUILD_NAME}
+    mem_limit: 1073741824
+    ports:
+      - "8085:8085"
+    links:
+      - "eurekaserver:eurekaserver"
+      - "configserver:configserver"
+      - "zipkin:zipkin"
+      - "zookeeper:zookeeper"
+      - "kafka:kafka"
+      - "zuulserver:zuulserver"
+      - "authenticationservice:authenticationservice"
+    environment:
+      PROFILE: "aws-dev"
+      SERVER_PORT: "8085"
+      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+      EUREKASERVER_PORT: "8761"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: "8888"
+      DATABASE_PORT: "5432"
+      ZIPKIN_URI: "http://zipkin:9411"
+      ZIPKIN_PORT: "9411"
+      ZKSERVER_URI: "zookeeper"
+      ZOOKEEPER_PORT: "2181"
+      KAFKASERVER_URI: "kafka"
+      KAFKASERVER_PORT: "9092"
+      ZUULSERVER_PORT: "5555"
+      AUTHSERVER_URI: "http://authenticationservice:8901/auth/user"
+      ENCRYPT_KEY: "IMSYMMETRIC"

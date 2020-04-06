@@ -42,7 +42,7 @@ public class JWTOAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .inMemory()
                 .withClient("eagleeye")
                 .secret(passwordEncoder.encode("thisissecret"))
-                .authorizedGrantTypes("password", "client-credentials", "refresh_token")
+                .authorizedGrantTypes("password", "client_credentials", "refresh_token")
                 .scopes("webclient", "mobileclient");
     }
 

@@ -28,11 +28,12 @@ public class OrganizationService {
     SimpleSourceBean simpleSourceBean;
 
     public Organization getOrg(String organizationId) {
+        logger.debug(">>> In the OrganizationService.getOrg() call");
+
         Optional<Organization> organization;
 
         // setting new span
         Span newSpan = tracer.nextSpan().name("getOrgDBCall");
-        logger.debug("In the organizationService.getOrg() call");
         // span start
         try (SpanInScope ws = tracer.withSpanInScope(newSpan.start())) {
             organization = orgRepositroy.findById(organizationId);

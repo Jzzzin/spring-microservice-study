@@ -1,0 +1,44 @@
+# runtime env
+language: java
+jdk:
+- openjdk8
+# use maven directory
+cache:
+  directory:
+  - "$HOME/.m2"
+# use sudo access
+sudo: required
+# use service
+services:
+- docker
+# alert
+notifications:
+  email:
+  - jzzzin@naver.com
+  on_success: always
+  on_failure: always
+# target branch master
+branches:
+  only:
+  - master
+# secure env
+env:
+  global:
+  - secure: eoSvsRGNsHecOLRuUn0MgAKfWbNXTCs9fIYPQI5Gb180GIzePjWJiec/HM1GXR+Z/rWCOFIjFKtwYOIyyKMQVdsMOnDgKGWtXgdcBpmXZjaUwVvBn0fJnH/qLHd/KmY7ql/TMMYdENNFvGLfKXy03YlP6cfc8ILuVeiGiwDNT4HE38+bVINTZE5JbP25VRnRPUSQCZT+flc80Xq5qm6D5qi0UBQ7tfSviLp33JIijAxCMXBC7BANnhcA5Z5WkHyRA5bVwQSyzcnXkwQ2n+Ak5ktypPMi6i8cMzIDPq6317FSxRykUfp3bFnajg/YP7yHZabXxIUgPaJ8VZHXRBQjvBJ70OKwvfOUStYAs3Q+KbeVLz+N6nIslIG6l+28f50zFtDV4GWTTVBTbUhg6rkAqoenSJtq1+6ScZZbv8xZxI+m3fKGlLnfI4yA29fvsn3yi+ugtWzFd1AW9DUMMECfcRqmXy6SAS6omagg0AJR2nE1YxLdK55aDOPaDhpgidhBedPshhuXTC+x2EfLL2I83p6wywL/79UVpKYczqaUC7dRSmkS26Nz0OiuLxb2J/mFVV+xMTFn6Jo/VcsLtzT2fUJoZxmuCo5PlNi5AVi1PFF9uPO9PBNAf8T+2RzFSMz2PYJ0f2NXEEl8rVckko6g6FE1/6UF5B/Y374QALlawKQ=
+  - secure: q9Rn2rwRPNNvVJSqtAWeBo+G04kXdV58Bv+V/Kkqv4U4I0ccW5KDD+X2RWrI3YOp+7rwYCSu3qoTAz5cDuxBJdVeZlZFvGaNyHPiIRMXasTYB+3V1+wGs4wSSluqv+2uapFp9Ejo/5SRyEEJwXkg4SEt1G39aNKhypUFkJFf+xsE7XdXVq33Xdqj+03uZs6YuQ4mfoYQswzjb+u17Q87ABOYHPx/X9cEG89OL7rUfxgbDFlU514P/1p8SviPztjsBPDezwUQsTEISBKyOxsp7zAAPOmVXW5fz7jK1mpFeMvXR+m0iUodGJnNnjOtGlhkHxmr0nFIV7eHgChmX0qFT2rJFjsq/Wm3fULFOQgt6HE1agn5yIAJqKYH8DCBJApfztuT5ywtV2FZv9SHqwZowGuuSKlhy1XH/K69xoPMUhtA6dwuVeS26ogEAUA9U1RbwKKdCQpGr4HwH7F5dw3vD1ZY9O5CL6P17Zg2Ur2D2LHaFCSixnAesa2MWExRUvi10KCVx8ignAt87nMlxpKphgn8E9ECMmkmgurmnrjojmiaR6KTUHMsuPizCVsplh5TwspGw5DGWIbDPM+pKfVBv0P5r7/ea/UJYSCfF6pJcIXmXw9xs/9n+kB7zzOFKDy+Z3TGpDXl+H8M9ZyV0YTeHp5sIi2oDtw008YzRewJuSA=
+  - secure: LUIXbwBi5HK374WKoVq4qUrapKUOx7iJLlN43EhtogXbXJ7TLvhpe6FTb2RXhEZmnhoI6fLuY6HZyy2arUPrS1MRCkxxy0gv9ScpAE8E0bWjCu6J1vSXsKdLDwRRUdRQHW2p8B6oTzIiq+54953EFIDI0A+6H4bUQvk23Fg6Tvw5+VtVtJTEE4+vhwe3hD/oPRdsQtxyQtz/bHKho7StBQYzMPRBHPFHqwyPoF50s7oqcUA6aIHJCb3O+RPPamGfivAyWcxd4G8vjfTyVwFdowONChqSDEHDJsvLXI4ny8+yVnU0eKyfJb0ywg7A6sBtNkT1CttKot7tsNr9Dg85PhtCueQYdwzSlnZT3TUoMCLliDRkhPm/CYXXjp0QDOAxYXwikiSllGM/zTNnHsA7Xz1HVbr+fEv3jwjEDrvWgz9y5y57KjbLImR2tw9XJPSqp5vIhZ7d4wFew/xeCFFiXCjIlA9iaUIlmS3QckAu/nVUDSUEKp+Syr//V27uF2ZoDCiYefT8CJAkGolSTIw2xoIaV06UO7rQ38Ydzqf71h7Q+ddxtGSgIBsA+wmH7T4eE3hTnELwC0wqmnxqRpUDhS64hpTxI0huD9r1HO0wTUMplkgfc3JaYz0KkuEyy1Lsviz0Wt2CzeNImpTsuKkySmBiBjvbdnv4DsWXlAyk/oU=
+# external library
+before_install:
+- gem install travis -v 1.8.9 --no-document
+- sudo curl -k -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
+- sudo chmod +x /usr/local/bin/ecs-cli
+- export BUILD_NAME=ch10-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
+- export CONTAINER_IP=0.0.0.0
+- export PLATFORM_TEST_NAME="ch10-platform-tests"
+# script
+script:
+- sh travis_scripts/tag_build.sh
+- sh travis_scripts/build_services.sh
+- sh travis_scripts/deploy_to_docker_hub.sh
+#- sh travis_scripts/deplay_to_amazon_ecs.sh
+#- sh travis_scripts/trigger_platform_tests.sh

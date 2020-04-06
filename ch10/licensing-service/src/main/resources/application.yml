@@ -1,0 +1,46 @@
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411 # zipkin location http:// 붙여야 됨
+  cloud:
+    stream:
+      bindings:
+#        input: # channel name
+#          destination: orgChangeTopic # message queue(topic) name
+#          content-type: application/json # message type
+#          group: licensingGroup # 그룹 내에서 한번만 처리(다른 그룹에서는 복사본이 처리됨)
+        inboundOrgChanges: # custom channel name
+          destination: orgChangeTopic
+          content-type: application/json
+          group: licensingGroup
+      kafka: # kafka use
+        binder:
+#          zkNodes: localhost # zookeeper location
+          brokers: localhost # kafka location
+  sleuth:
+    propagation-keys: Authorization # auth token 전파
+#    sampler:
+#      probability: 1 # zipkin sampling frequency always
+
+
+#JWT tokenservice 사용 시 auth uri 호출하지 않는다
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:8901/auth/user
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.bloknoma: DEBUG
+#  file: c:/Workspace/log/licensing/application.log # nxlog log 수집 위치, logback 설정을 사용하는게 낫다

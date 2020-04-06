@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active: default
+  cloud:
+    config:
+      enabled: true
+#      discovery: # config server 2개 이상인 경우
+#        enabled: true
+#        service-id: configserver

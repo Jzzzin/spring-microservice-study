@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user_orgs")
 public class UserOrganization implements Serializable {
+
     @Id
     @Column(name = "user_name", nullable = false)
     String userName;

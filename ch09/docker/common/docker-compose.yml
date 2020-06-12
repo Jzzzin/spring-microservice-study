@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   eurekaserver:
     image: jin/bn-eurekasvr:ch09
@@ -70,10 +70,10 @@ services:
   licensingservice:
     image: jin/bn-licensing-service:ch09
     ports:
-      - "8080:8080"
+      - "8081:8081"
     environment:
       PROFILE: "default"
-      SERVER_PORT: "8080"
+      SERVER_PORT: "8081"
       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
       EUREKASERVER_PORT: "8761"
       CONFIGSERVER_URI: "http://configserver:8888"

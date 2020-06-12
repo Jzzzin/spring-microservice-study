@@ -7,11 +7,22 @@ spring:
       discovery:
         enabled: true
       server:
-        git:
-          uri: https://github.com/Jzzzin/spring-micro-study/
-          searchPaths: licensingservice, organizationservice, zuulservice, specialroutesservice, authenticationservice
-          username: Jzzzin
-          password: GITHUBhedgehog3#
+#        git:
+#          uri: https://github.com/Jzzzin/spring-micro-study/
+#          searchPaths: licensingservice, organizationservice, zuulservice, specialroutesservice, authenticationservice
+#          username: Jzzzin
+#          password: GITHUBhedgehog3#
+####
+#Classpath and file-based solution
+####
+        native:
+## 절대경로 (mvn spring-boot:run 으로 실행하는 경우만 가능, 도커는 안됨)
+## windows 에서 경로표시 할 때 file:/// + 드라이브명:/폴더명 으로 작성해야 함
+##          searchLocations: file:///c:/Workspace/spring-micro-study/ch03/confsvr/src/main/resources/config/licensingservice,
+##                           file:///c:/Workspace/spring-micro-study/ch03/confsvr/src/main/resources/config/organizationservice
+## classpath 사용(도커로 실행하는 경우 환경설정 파일 경로)
+          searchLocations: classpath:config/licensingservice, classpath:config/organizationservice, classpath:config/zuulservice, classpath:config/specialrouteservice, classpath:config/authenticationservice
+
 
 #Setting logging levels
 logging:
@@ -29,3 +40,4 @@ eureka:
     fetch-registry: true # eureka registry 캐싱
     service-url:
       defaultZone: http://localhost:8761/eureka/ # eureka 서비스 위치
+
